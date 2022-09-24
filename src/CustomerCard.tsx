@@ -16,6 +16,7 @@ export default function CustomerCard({ name }: CustomerCardTypes) {
   const dispatch = useDispatch()
 
   const handleAddFood = () => {
+    if(!newFood.food) return;
     dispatch(addFood(newFood))
     setNewFood({food: "", customer: name})
   }
