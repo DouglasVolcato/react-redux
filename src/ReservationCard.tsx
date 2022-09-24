@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { removeReservation } from "./features/reservationSlice";
-import {addCustomer} from "./features/customerSlice"
+import { addCustomer } from "./features/customerSlice";
 
 interface ReservatiCardTypes {
   name: string;
@@ -12,9 +12,9 @@ export default function ReservationCard({ name, index }: ReservatiCardTypes) {
   const dispatch = useDispatch();
 
   const handleAddCustomers = () => {
-    dispatch(addCustomer(name))
+    dispatch(addCustomer(name));
     dispatch(removeReservation(index));
-}
+  };
 
   return (
     <div>
