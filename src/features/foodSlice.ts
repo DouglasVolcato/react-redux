@@ -1,14 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface foodState {
-  value: { food: string; customer: string }[];
+  value: { food: string; customer: number }[];
 }
 
 const initialState: foodState = {
-  value: [
-    { food: "string", customer: "string" },
-    { food: "string", customer: "string" },
-  ],
+  value: [],
 };
 
 export const foodSlice = createSlice({
@@ -17,7 +14,7 @@ export const foodSlice = createSlice({
   reducers: {
     addFood: (
       state,
-      action: PayloadAction<{ food: string; customer: string }>
+      action: PayloadAction<{ food: string; customer: number }>
     ) => {
       state.value.push(action.payload);
     },

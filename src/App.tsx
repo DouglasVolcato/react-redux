@@ -44,8 +44,8 @@ function App() {
           </div>
         </div>
         <div className="customer-food-container">
-          {customers.map((name) => (
-            <CustomerCard name={name} />
+          {customers.map((name, index) => (
+            <CustomerCard name={name} index={index}/>
           ))}
         </div>
       </div>
